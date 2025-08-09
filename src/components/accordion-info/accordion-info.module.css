@@ -1,0 +1,119 @@
+.accordion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.accordion-list__item {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: rgb(119, 97, 70);
+  color: black;
+  box-shadow: 24px 26px 13px 2px rgba(73, 42, 3, 0.4);
+}
+
+.accordion-list__prev-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+
+.accordion-list__title {
+  font-size: clamp(1.063rem, 0.347vw + 0.896rem, 1.313rem);
+}
+
+.accordion-item__content {
+  max-width: 950px;
+  padding-left: clamp(0.625rem, 1.338vw + 0.27rem, 1.875rem);
+  max-height: 0;
+  transition: max-height 0.5s ease;
+  overflow: hidden;
+  font-size: 15px;
+}
+
+.accordion-list__item--open .accordion-item__content {
+  max-height: 1000px;
+}
+
+.accordion-item__content-item {
+  padding: 10px 0;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.accordion-item__content-item:not(:last-child) {
+  border-bottom: 1px solid #ff8d00;
+}
+
+.accordion-list__toggle {
+  margin: -20px;
+  padding: 20px;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  background-color: #15b38d;
+}
+
+.accordion-list__toggle-icon {
+  transition: transform 0.3s ease;
+}
+
+.accordion-list__item--open .accordion-list__toggle-icon {
+  transform: rotate(45deg);
+}
+
+@media (max-width: 768px) {
+  .accordion-list__item {
+    padding: 8px;
+  }
+  .accordion-list__toggle {
+    margin: -8px;
+    padding: 8px;
+  }
+}
+
+.accordion-list__item--skeleton {
+  background-color: rgb(119, 97, 70);
+  padding: 20px;
+  animation: pulse 1.5s infinite ease-in-out;
+  height: 65px;
+  width: 100%;
+  position: relative;
+}
+
+.skeleton-button {
+  height: 100%;
+  width: 60px;
+  background-color: #15b38d;
+  animation: pulse 1.5s infinite ease-in-out;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+
+
+.skeleton-header {
+  height: 30px;
+  width: 60%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}

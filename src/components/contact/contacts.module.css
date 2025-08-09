@@ -1,0 +1,48 @@
+.contacts__title {
+  font-weight: 500;
+  font-size: clamp(1.75rem, 1.389vw + 1.083rem, 2.75rem);
+  max-width: 230px;
+  padding-bottom: 5px;
+  border-bottom: 3px solid #0dd1a2;
+  margin-bottom: 50px;
+}
+
+.contacts__us {
+  display: flex;
+  gap: 60px;
+}
+
+.contacts__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  max-width: 240px;
+  padding-left: 30px;
+}
+
+.contacts__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts__city {
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 13px;
+}
+
+.contacts__link {
+  display: inline-block;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 130%;
+}
+
+.contacts__link:hover {
+ text-decoration: underline;
+}
+
+.contacts__link:not(:last-child) {
+  margin-bottom: 5px;
+}

@@ -1,0 +1,24 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding-top: 40px;
+  margin-bottom: 40px;
+}
+
+.header__logo {
+  max-width: 193px;
+  width: 100%;
+  border: 2px solid blue;
+  padding: 25px;
+  color: #eb08eb;
+}
+
+

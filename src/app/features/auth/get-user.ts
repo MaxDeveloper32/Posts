@@ -23,6 +23,6 @@ export function useUserData() {
     queryKey: ["user"],
     queryFn: getUser,
     staleTime: 60 * 1000,
-   
+    retry: false,
   });
 }

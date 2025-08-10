@@ -1,3 +1,4 @@
+import PreviewWelcome from "@/components/preview-welcome/preview-welcome";
 import { fetchPosts } from "./features/posts/api/getPosts";
 import PostsList from "@/components/posts-list/posts-list";
 
@@ -9,7 +10,7 @@ const Home = async () => {
     <main className="main-section">
       <section>
         <div className="wrapper">
-          <h1 className="main-section__title"> Lorem ipsum dolor ? </h1>
+          <PreviewWelcome />
           <PostsList initialData={initialPosts} />
         </div>
       </section>

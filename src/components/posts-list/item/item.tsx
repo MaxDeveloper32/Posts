@@ -25,7 +25,7 @@ const Item = ({ post }: ItemProps) => {
         </div>
 
         <Image
-          src="/main-image.webp"
+          src="/btf6.webp"
           className="post-list__image"
           width={700}
           height={500}

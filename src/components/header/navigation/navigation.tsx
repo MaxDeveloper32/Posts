@@ -1,8 +1,5 @@
-"use client";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import styles from "./navigation.module.css";
-import clsx from "clsx";
+import NavItem from "./nav-item/nav-item";
 
 const NAV_ITEMS = [
   { name: "Contacts", path: "/contacts", id: 1 },
@@ -13,20 +10,11 @@ const NAV_ITEMS = [
 ];
 
 const Navigation = () => {
-  const pathname = usePathname();
-
   return (
     <nav className={styles["header__nav"]}>
       <ul className={styles["header__nav-list"]}>
         {NAV_ITEMS.map((item) => (
-          <li
-            key={item.id}
-            className={clsx(styles["header__nav-item"], {
-              [styles.active]: pathname === item.path,
-            })}
-          >
-            <Link href={item.path}>{item.name}</Link>
-          </li>
+          <NavItem key={item.id} item={item} />
         ))}
       </ul>
     </nav>

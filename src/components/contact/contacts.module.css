@@ -40,9 +40,16 @@
 }
 
 .contacts__link:hover {
- text-decoration: underline;
+  text-decoration: underline;
 }
 
 .contacts__link:not(:last-child) {
   margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .contacts__us {
+    flex-direction: column;
+    gap: 40px;
+  }
 }

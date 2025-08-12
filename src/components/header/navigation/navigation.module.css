@@ -14,9 +14,19 @@
   background-color: #b0acac;
   border-radius: 50%;
   vertical-align: middle;
- transform: translateX(-16px);
+  transform: translateX(-16px);
 }
 
 .active {
   color: #0dd1a2;
+}
+
+@media (max-width: 768px) {
+  .header__nav-list {
+    display: none;
+  }
+
+  .header__nav-item:not(:first-child)::before {
+    content: none;
+  }
 }

@@ -1,8 +1,8 @@
-html,
+/* html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-}
+} */
 
 body {
   font-family: "Ubuntu", sans-serif;
@@ -18,9 +18,9 @@ body {
 }
 
 button {
-  outline: none; /* Убирает обводку */
+  outline: none;
   border: none;
-  background-color: transparent; /* Делает фон кнопки прозрачным */
+  background-color: transparent;
 }
 
 button:hover {
@@ -58,14 +58,22 @@ address {
   padding: 140px 0;
 }
 
-
 .main-section {
   background-image: url("/blue-moon.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed; 
+  background-attachment: fixed;
   min-height: 100vh;
   width: 100%;
   padding: 160px 0;
 }
+
+@media (max-width: 768px) {
+  .global-main {
+  padding: 100px 0;
+}
+
+}
+
+
 

@@ -3,13 +3,14 @@ import { usePost } from "@/app/features/posts/api/getPostsId";
 import Image from "next/image";
 import ButtonLike from "../button-like/button-like";
 import styles from "./post-content.module.css";
-import TextPost from "../text-post/text-post";
+import TextContent from "../text-content/text-contet";
+
 
 type PostContentProps = {
   id: string;
 };
 
-const IMAGES = ['/1.webp', '/2.webp', '/3.webp', '/4.webp']
+const IMAGES = ['/1.webp', '/2.webp', '/3.jpg', '/4.webp']
 
 const PostContent = ({ id }: PostContentProps) => {
   const { data: post } = usePost(id);
@@ -22,7 +23,7 @@ const PostContent = ({ id }: PostContentProps) => {
         <h1 className={styles.post__title}>{post.title}</h1>
         <Image
           className={`${styles["post__main-image"]} ${styles["post__image--style"]}`}
-          src='/godOfWar.webp'
+          src='/post-img.webp'
           width={900}
           height={500}
           priority
@@ -32,7 +33,7 @@ const PostContent = ({ id }: PostContentProps) => {
 
       <div className={styles.post__description}>
         <h2> The text of the post </h2>
-          <TextPost />
+          <TextContent />
          <div className={styles.post__likes}>
           <p>Понравилась статья ? </p>
           <ButtonLike id={post.id} isLike={post.isLike} />

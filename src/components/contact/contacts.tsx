@@ -1,6 +1,7 @@
 import Link from "next/link";
 import ContactForm from "./contact-form/contact-form";
 import styles from "./contacts.module.css";
+import clsx from "clsx";
 
 const ContactsUs = [
   {
@@ -28,7 +29,9 @@ const ContactsUs = [
 const Contacts = () => {
   return (
     <div className={`${styles["contacts"]} wrapper`}>
-      <h1 className={styles["contacts__title"]}>Контакты</h1>
+      <h1 className={clsx("global-title", styles["contacts__title"])}>
+        Контакты
+      </h1>
 
       <section className={styles["contacts__feedback-block"]}>
         <div className={styles["contacts__us"]}>
@@ -42,7 +45,7 @@ const Contacts = () => {
                 >
                   {contact.phone}
                 </Link>
-                
+
                 <Link
                   href={`mailto:${contact.email}`}
                   className={styles["contacts__link"]}

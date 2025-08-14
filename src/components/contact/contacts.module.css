@@ -1,9 +1,5 @@
 .contacts__title {
-  font-weight: 500;
-  font-size: clamp(1.75rem, 1.389vw + 1.083rem, 2.75rem);
   max-width: 230px;
-  padding-bottom: 5px;
-  border-bottom: 3px solid #0dd1a2;
   margin-bottom: 50px;
 }
 

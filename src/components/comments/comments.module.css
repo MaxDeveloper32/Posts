@@ -10,9 +10,10 @@
 }
 
 .post__comments-item {
+  max-width: 80%;
   background-color: #171717;
   padding: clamp(0.313rem, 1.003vw + 0.046rem, 1.25rem);
-  border-radius: 50px;
+  border-radius: clamp(0.625rem, 2.676vw - 0.086rem, 3.125rem);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   font-size: clamp(0.938rem, 0.434vw + 0.729rem, 1.25rem);
 }
@@ -32,6 +33,10 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+}
+
+.post__text {
+  margin-bottom: 10px;
 }
 
 .post__comments-item--skeleton {
@@ -93,4 +98,11 @@
 }
 
 @media (max-width: 768px) {
+  .post__comments-item {
+    max-width: 100%;
+  }
+  .post__user-info {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
 }

@@ -1,7 +1,6 @@
 "use client";
 import { useComments } from "@/app/features/posts/api/get-comments";
 import CommentsSkeleton from "./comments-skeleton";
-import TextPost from "../text-post/text-post";
 import { format, isThisYear } from "date-fns";
 import { ru } from "date-fns/locale";
 import styles from "./comments.module.css";
@@ -42,7 +41,9 @@ const Comments = () => {
                 </time>
               </div>
 
-              <TextPost />
+                <p className={styles["post__text"]}>
+                  {comment.text}
+                </p>
               <div className={styles["post__count-like"]}>
                 <p> Лайк комментариев: {comment.likes} </p>
               </div>

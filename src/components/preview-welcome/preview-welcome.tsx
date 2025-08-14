@@ -5,7 +5,7 @@ const PreviewWelcome = () => {
   return (
     <div className="preview-welcome">
       <div className="preview-welcome__description">
-        <h1 className="preview-welcome__title">
+        <h1 className="preview-welcome__title global-title">
           100 posts to pass the time and just read ༼ つ ◕_◕ ༽つ
         </h1>
 

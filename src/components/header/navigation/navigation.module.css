@@ -18,11 +18,11 @@
 }
 
 .active {
-  color: #0dd1a2;
+  color: var(--brand);
 }
 
 @media (max-width: 768px) {
-  .header__nav-list {
+  .header__nav {
     display: none;
   }
 

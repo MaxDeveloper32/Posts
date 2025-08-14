@@ -11,7 +11,7 @@ type Comment = {
 
 export const fetchPost = async (): Promise<Comment[]> => {
   const res = await fetch(
-    `https://api.npoint.io/2b1cdf05a0e1447abf9b`
+    `https://jsonkeeper.com/b/YMHU4`
   );
   if (!res.ok) throw new Error(`Ошибка загрузки comments `);
   return res.json();

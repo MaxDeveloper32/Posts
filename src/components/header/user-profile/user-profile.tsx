@@ -8,7 +8,12 @@ const UserProfile = () => {
 const { data: user, } = useUserData();
 
    if (!user) {
-    return <Link href="/user-auth">Войти</Link>;
+    return (
+      <div>
+        <Link href="/user-auth">Войти</Link>
+
+      </div>
+    );
   }
 
     return (

@@ -24,5 +24,6 @@ export function useUserData() {
     queryFn: getUser,
     staleTime: 60 * 1000,
     retry: false,
+    refetchOnWindowFocus: false,
   });
 }

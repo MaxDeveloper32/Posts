@@ -1,8 +1,11 @@
-/* html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-} */
+:root {
+  --brand: #15b28d;
+  --brand---brighter: #0dd1a2;
+  --black: #1c1c1c;
+  --white: #fff;
+  --correct: #1dc04b;
+  --incorrect: #f97676;
+}
 
 body {
   font-family: "Ubuntu", sans-serif;
@@ -48,7 +51,7 @@ address {
 }
 
 .global-main {
-  background-image: url("/background-post.jpg");
+  background-image: url("/background-post.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -68,12 +71,16 @@ address {
   padding: 160px 0;
 }
 
+.global-title {
+  font-weight: 500;
+  font-size: clamp(1.25rem, 1.338vw + 0.895rem, 2.5rem);
+  padding-bottom: 4px;
+  border-bottom: 3px solid var(--brand);
+  margin-bottom: 20px;
+}
+
 @media (max-width: 768px) {
   .global-main {
-  padding: 100px 0;
+    padding: 100px 0;
+  }
 }
-
-}
-
-
-
